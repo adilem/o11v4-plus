@@ -1,13 +1,17 @@
 [Unit]
 Description=o11v4 Service
-After=network.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
 WorkingDirectory=/home/o11/o11v4
 ExecStart=/home/o11/o11v4/o11_v4 -p 2053
 Restart=always
+RestartSec=10
 User=root
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
