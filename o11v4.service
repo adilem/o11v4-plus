@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/home/o11/o11v4
-ExecStart=/home/o11/o11v4/o11_v4 -p 2054 -noramfs
+ExecStart=/home/o11/o11v4/o11_v4 -p 2024 -noramfs
 Restart=always
 RestartSec=10
 User=root
